@@ -40,8 +40,7 @@ body,html
 
 body 
 {
-  background: url() no-repeat center center fixed;
-  background-color: black;
+  background: linear-gradient(0deg,#333333,#5A5454) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -54,7 +53,7 @@ body
   user-select: none;
   font-family: monospace;
   font-weight: bold;
-  color: #ffffff;
+  color: #f0f0f0;
   text-shadow: 1px 2px 0px rgba(8,230,255,100), -3px -2px 0px rgba(255,0,0,100);
   
 }
