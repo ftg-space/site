@@ -40,7 +40,8 @@ body,html
 
 body 
 {
-  background: linear-gradient(0deg,#333333,#5A5454) no-repeat center center fixed;
+  background: url() no-repeat center center fixed;
+  background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -53,7 +54,7 @@ body
   user-select: none;
   font-family: monospace;
   font-weight: bold;
-  color: #f0f0f0;
+  color: #ffffff;
   text-shadow: 1px 2px 0px rgba(8,230,255,100), -3px -2px 0px rgba(255,0,0,100);
   
 }
@@ -71,15 +72,80 @@ body
 
 }
 .animated { opacity: 0; }
-.container { position: relative; display: table-cell; vertical-align: middle; padding:40px 20px}
+.container { position: relative; display: table-cell; vertical-align: middle; padding:40px 20px; z-index:10;}
 
 .header .logo { padding-bottom: 1px; }
 
 .social ul { font-size: 0; display: inline-block; }
 .social ul li { font-size: 21px; display: inline-block; list-style: none;}
-.social ul li a { color: #fff; background: rgba(0,0,0,.3); padding: 30px; display: block; -webkit-transition: .2s ease; -o-transition: .2s ease; transition: .2s ease; }
-.social ul li a:hover { background: rgba(0,0,0,.5); }
+/*.social ul li a { color: #fff; background: rgba(0,0,0,.3); padding: 30px; display: block; -webkit-transition: .2s ease; -o-transition: .2s ease; transition: .2s ease; }
+.social ul li a:hover { background: rgba(0,0,0,.5); }*/
+.btn {
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 45px;
+	margin: 0 auto 2em;
+	max-width: 160px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+	width: 100%;
+}
 
+@media (min-width: 400px) {
+	.btn {
+		display: inline-block;
+		margin-right: 2.5em;
+	}
+
+	.btn:nth-of-type(even) {
+		margin-right: 0;
+	}
+}
+
+.btn:hover {
+	text-decoration: none;
+}
+
+.btn-1 {
+	background: rgba(20, 20, 20, 0.63);
+  font-weight: 100;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-1 svg {
+	height: 45px;
+	left: 0;
+	position: absolute;
+	top: 0;
+  width: 100%;
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-1 rect {
+	fill: none;
+	stroke: rgba(255, 255, 255, 0.336);
+	stroke-width: 2;
+  stroke-dasharray: 422, 0;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-1:hover {
+	background: rgba(0, 0, 0, 0.822);
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+
+.btn-1:hover rect {
+	stroke-width: 5;
+	stroke-dasharray: 15, 310;
+	stroke-dashoffset: 48;
+
+}
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
